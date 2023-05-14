@@ -7,5 +7,11 @@
     "test": "npx cypress run"
   },
   "author": "jean julien h",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.12.0"
+  },
+  "dependencies": {
+    "cypress-plugin-api": "^2.11.0"
+  }
 }

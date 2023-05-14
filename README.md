@@ -7,6 +7,7 @@ This repo contains some automation scripts the restful booker API available at h
 3. Update the booking (change checkout date and additional needs)
 
 
-We wrote the scripts with Cypress, which can be an alternative to Postman for small project like this. 
+We wrote the scripts with Cypress, which can be an alternative to Postman for small project like this one. 
+
 
 
