@@ -15,8 +15,8 @@ describe('Create, retrieve and partially update a booking', () => {
         "totalprice": 111,
         "depositpaid": true,
         "bookingdates": {
-          "checkin": "2023-24-05",
-          "checkout": "2023-27-05"
+          "checkin": "2023-05-24",
+          "checkout": "2023-05-27"
         },
         "additionalneeds": "Breakfast"
       }
@@ -66,7 +66,42 @@ describe('Create, retrieve and partially update a booking', () => {
     })
 
 
-  })
+  });
+
+  it('partially update the created booking ', () => {
+    cy.api({
+
+      method: 'PATCH',
+      url: 'https://restful-booker.herokuapp.com/booking/' + id,
+      body: {
+
+        "bookingdates": {
+          "checkin": "2023-05-25",
+          "checkout": "2024-05-30"
+        },
+        "additionalneeds": "Diner + Champagne"
+
+      },
+
+      headers: {
+
+        authorization: `Basic YWRtaW46cGFzc3dvcmQxMjM=`,
+
+
+      },
+
+    }).as('updatedBooking');
+
+    cy.get('@updatedBooking').should((response) => {
+      // check the update resquest status is equal to 200
+      expect(response.status).to.eq(200)
+      // check the response body's additionalneeds
+      expect(response.body).to.have.property('additionalneeds').to.eq('Diner + Champagne')
+      expect(response.body).to.have.property('bookingdates')
+    })
+
+
+  });
 
 
 
