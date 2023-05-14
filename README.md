@@ -1,4 +1,4 @@
-# Project Presentation
+# Project Description
 
 This repo contains some automation scripts the restful booker API available at https://restful-booker.herokuapp.com/apidoc/index.html for the below API requests/sceanrios:
 
