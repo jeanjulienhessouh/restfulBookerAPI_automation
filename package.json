@@ -1,0 +1,11 @@
+{
+  "name": "restfulbookerapi_automation",
+  "version": "1.0.0",
+  "description": "restful booker api automation with Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "author": "jean julien h",
+  "license": "ISC"
+}
