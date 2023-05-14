@@ -77,7 +77,7 @@ describe('Create, retrieve and partially update a booking', () => {
 
         "bookingdates": {
           "checkin": "2023-05-25",
-          "checkout": "2024-05-30"
+          "checkout": "2023-05-30"
         },
         "additionalneeds": "Diner + Champagne"
 
@@ -97,7 +97,9 @@ describe('Create, retrieve and partially update a booking', () => {
       expect(response.status).to.eq(200)
       // check the response body's additionalneeds
       expect(response.body).to.have.property('additionalneeds').to.eq('Diner + Champagne')
-      expect(response.body).to.have.property('bookingdates')
+      // asssert the response body contains the correct booking dates
+      expect(response.body.bookingdates).to.have.property('checkin').to.eq('2023-05-25')
+      expect(response.body.bookingdates).to.have.property('checkout').to.eq('2023-05-30')
     })
 
 
