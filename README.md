@@ -27,4 +27,14 @@ We wrote the scripts with Cypress, which can be an alternative to Postman for sm
 ## Run the script / the tests
 To run the script in command line, type the following command: npx cypress run
 
-## 
+![Screenshot of command to run to start the tests](assets/command_to_start_the_tests.png)
+
+**Overview of the outputs**
+
+![Screenshot of tests running in command line 1](assets/tests_running_in_cli_start.png)
+
+
+![Screenshot of tests running in command line 2](assets/tests_running_in_cli_view_end.png)
+
+![Screenshot of tests running in Cypress view](assets/tests_running_in_cypress_view.png)
+
