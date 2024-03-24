@@ -38,7 +38,3 @@ To run the script in command line, type the following command: npx cypress run
 
 ![Screenshot of tests running in Cypress view](assets/tests_running_in_cypress_view.png)
 
-
-## Explanation video 
-
-Here is the  <a href="https://drive.google.com/file/d/16mfcOJXE6A2dEmYsD4_f2vaqwnCTNHqw/view?usp=sharing" target="_blank">explanation video for the written code</a> .
